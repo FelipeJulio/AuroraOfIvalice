@@ -35,14 +35,16 @@ Aurora Of Ivalice (AOI) is a dynamic sunset system mod that gradually alters the
 ### Is it compatible with all mods?
 - Compatibility with all mods isn't guaranteed. However, it works well with most of Xeavin's mods.
 
-### What are the future plans?
-- Improved refinement of current presets.
-- Additional presets for specific regions (sets of maps).
-- Exposing the time (day, evening, night) for use in other mods, such as stronger monsters at night.
-- Exploring texture or global lighting adjustments to enhance visuals further.
-
 ### Have you ever worked with .lua or modding games before?
 - No, this is my first time both modding games and using the Lua language.
+
+### What are the next updates?
+- Enhance and refine presets to be naturally darker
+- Create presets for each region (set of maps) so that everything looks more natural
+
+### What are the future plans?
+- Exposing the time and cycle percent (day, evening, night) for use in other mods, such as stronger monsters during nighttime periods.
+- Study how to work with textures and global lighting to further enhance visuals.
 
 ---
 
@@ -80,6 +82,7 @@ A heartfelt thanks to the following individuals for their help and encouragement
 
 ## Examples
 
+The cycle speed was intentionally increased to create the demonstrations below.
 
 https://github.com/user-attachments/assets/c49ad424-ac4a-4f84-b693-17c8e48963a3
 
