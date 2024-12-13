@@ -23,12 +23,12 @@ end
 local function loadExternalFile(path, description)
     local file, err = loadfile(path, "t", {})
     if not file then
-        showLog(false, string.format("Aurora of Ivalice (AOI): Failed to load %s: %s", description, err))
+        showLog(true, string.format("Aurora of Ivalice (AOI): Failed to load %s: %s", description, err))
         return nil
     end
     local status, result = pcall(file)
     if not status then
-        showLog(false, string.format("Aurora of Ivalice (AOI): Failed to execure %s: %s", description, result))
+        showLog(true, string.format("Aurora of Ivalice (AOI): Failed to execute %s: %s", description, result))
         return nil
     end
     return result
@@ -49,7 +49,7 @@ local function loadGameData()
     gamePresets = pointersData.presets or {}
 
     if next(gamePresets) == nil then
-        showLog(false, "Aurora of Ivalice (AOI): No presets found...")
+        showLog(true, "Aurora of Ivalice (AOI): No presets found ...")
         return false
     end
 
@@ -71,7 +71,7 @@ end
 local function applyPreset(presetName)
     local preset = gamePresets[presetName]
     if not preset then
-        preset = gamePresets["default"]
+        preset = gamePresets["sunny"]
     end
 
     if not preset then
@@ -127,7 +127,7 @@ end
 local function persistPointers()
     for basePointer, config in pairs(AOIPointers.pointers) do
         if not AOIPointers.initialValues.pointers[basePointer] then
-            showLog(false, string.format("Aurora of Ivalice (AOI): Initial values ​​for basePointer %X not found.",
+            showLog(false, string.format("Aurora of Ivalice (AOI): Initial values for basePointer %X not found.",
                 basePointer))
         else
             for name, data in pairs(config.offsets) do
@@ -206,7 +206,7 @@ local function updateInitialValues()
                 end
             end
         else
-            showLog(false, string.format("Aurora of Ivalice (AOI): Base pointer %X not found.", basePointer))
+            showLog(false, string.format("Aurora of Ivalice (AOI): The basePointer %X was not found.", basePointer))
         end
     end
 
@@ -216,7 +216,7 @@ local function updateInitialValues()
             AOIPointers.initialValues.staticAddresses[static.address] = value
         else
             showLog(false, string.format(
-                "Aurora of Ivalice (AOI): Unable to read initial value from static address %X.", static.address))
+                "Aurora of Ivalice (AOI): Unable to read initial value from staticAddress %X.", static.address))
         end
     end
 end
@@ -235,11 +235,11 @@ local function resetDefaultValues()
             if not AOIPointers.initialValues.pointers[basePointer] then
                 showLog(false,
                     string.format(
-                        "Aurora of Ivalice (AOI): Valores iniciais do pointer base %X não foram atualizados corretamente.",
+                        "Aurora of Ivalice (AOI): Initial values for basePointer %X were not updated correctly.",
                         basePointer))
             else
                 showLog(false, string.format(
-                    "Aurora of Ivalice (AOI): Valores iniciais do pointer base %X atualizados com sucesso.", basePointer))
+                    "Aurora of Ivalice (AOI): Initial values for basePointer %X successfully updated.", basePointer))
             end
         end
 
@@ -320,22 +320,22 @@ local function applyPatch()
     event.registerEventSync("onFlip", persistValues)
     event.registerEventAsync("exit", onExit)
 
-    showLog(true, string.format("Aurora of Ivalice (AOI) %s: Successfully applyed!", AOISettings.modVer))
+    showLog(true, string.format("Aurora of Ivalice (AOI) %s: Applying patch.", AOISettings.modVer))
 end
 
 local function startPatch()
     if not loadSettings() then
-        showLog(false, string.format("Aurora of Ivalice (AOI): Couldn't load AOISettings.lua"))
+        showLog(true, string.format("Aurora of Ivalice (AOI): Couldn't load AOISettings.lua"))
         return false
     end
 
     if not loadGameData() then
-        showLog(false, string.format("Aurora of Ivalice (AOI): Couldn't load AOIPointers.lua"))
+        showLog(true, string.format("Aurora of Ivalice (AOI): Couldn't load AOIPointers.lua"))
         return false
     end
 
     if not loadMaps() then
-        showLog(false, string.format("Aurora of Ivalice (AOI): Couldn't load AOIMaps.lua"))
+        showLog(true, string.format("Aurora of Ivalice (AOI): Couldn't load AOIMaps.lua"))
         return false
     end
 
@@ -349,7 +349,7 @@ local function startPatch()
     end
 
     if AOISettings.disableMod then
-        showLog(false, string.format("Aurora of Ivalice (AOI): Mod is disabled."))
+        showLog(true, string.format("Aurora of Ivalice (AOI): Mod is disabled."))
         return false
     end
 

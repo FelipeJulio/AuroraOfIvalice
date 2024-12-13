@@ -75,7 +75,7 @@ A heartfelt thanks to the following individuals for their help and encouragement
 ## Installation
 
 1. Download the mod files.
-2. Install AuroraOfIvalice.7z with Vortex or Paste files at `FINAL FANTASY XII THE ZODIAC AGE\x64\scripts`
+2. Install `AuroraOfIvalice.zip` with Vortex or Paste files at `FINAL FANTASY XII THE ZODIAC AGE\x64\scripts`
 4. Launch the game and enjoy!
 
 ---
