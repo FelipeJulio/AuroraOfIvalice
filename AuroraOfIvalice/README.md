@@ -76,3 +76,17 @@ A heartfelt thanks to the following individuals for their help and encouragement
 2. Install AuroraOfIvalice.7z with Vortex or Paste files at `FINAL FANTASY XII THE ZODIAC AGE\x64\scripts`
 4. Launch the game and enjoy!
 
+---
+
+## Examples
+
+
+https://github.com/user-attachments/assets/c49ad424-ac4a-4f84-b693-17c8e48963a3
+
+https://github.com/user-attachments/assets/2c8a91dd-ad61-43eb-8332-c1be79189c51
+
+https://github.com/user-attachments/assets/86962026-6c4b-48b4-bf19-7ea92a39c6c7
+
+
+
+
