@@ -15,7 +15,40 @@ Aurora Of Ivalice (AOI) is a dynamic sunset system mod that gradually alters the
 ## FAQs
 
 ### Which maps are included?
-- All open-world maps are included, except for the Trial Mode.
+The maps below include a generic preset that works well on most maps
+
+- Archades
+- Balfonheim
+- Bhujerba
+- Cerobi Steppe
+- Dalmasca Estersand
+- Dalmasca Westersand
+- Eruyt Village
+- Feywood
+- Giruvegan - Externals
+- Giza Plains
+- Jahara
+- Lhusu Mines - Externals
+- Mosphoran Highwaste
+- Mt. Bur-Omisace
+- Nabreus Deadlands
+- Nalbina Dungeon - Externals
+- Nalbina Town
+- Nam-Yensa Sandsea
+- Ogir-Yensa Sandsea
+- Old Archades
+- Ozmone Plain
+- Paramina Rift
+- Pharos - Externals
+- Phon Coast
+- Rabanastre
+- Ridorana Cataract
+- Salikawood
+- Skyferry - Externals
+- Stilshrine of Miriam - Externals
+- Tchita Uplands
+- The Tomb of Raithwall - Externals
+- Zertinan Caverns
 
 ### Have all maps been tested?
 - Not completely, but the majority have been tested.
@@ -45,6 +78,42 @@ Aurora Of Ivalice (AOI) is a dynamic sunset system mod that gradually alters the
 ### What are the future plans?
 - Exposing the time and cycle percent (day, evening, night) for use in other mods, such as stronger monsters during nighttime periods.
 - Study how to work with textures and global lighting to further enhance visuals.
+
+### Map preset progress
+The maps listed below include an adjusted and less generic preset, as soon as they are all completed the mod will no longer be an beta-version and will possibly be on Nexus Mods.
+
+- [ ] Archades
+- [ ] Balfonheim
+- [x] Bhujerba
+- [ ] Cerobi Steppe
+- [ ] Dalmasca Estersand
+- [ ] Dalmasca Westersand
+- [ ] Eruyt Village
+- [ ] Feywood
+- [ ] Giruvegan - Externals
+- [x] Giza Plains
+- [ ] Jahara
+- [ ] Lhusu Mines - Externals
+- [ ] Mosphoran Highwaste
+- [ ] Mt. Bur-Omisace
+- [ ] Nabreus Deadlands
+- [ ] Nalbina Dungeon - Externals
+- [ ] Nalbina Town
+- [ ] Nam-Yensa Sandsea
+- [x] Ogir-Yensa Sandsea
+- [ ] Old Archades
+- [ ] Ozmone Plain
+- [ ] Paramina Rift
+- [ ] Pharos - Externals
+- [x] Phon Coast
+- [x] Rabanastre
+- [ ] Ridorana Cataract
+- [ ] Salikawood
+- [ ] Skyferry - Externals
+- [ ] Stilshrine of Miriam - Externals
+- [x] Tchita Uplands
+- [ ] The Tomb of Raithwall - Externals
+- [x] Zertinan Caverns
 
 ---
 
