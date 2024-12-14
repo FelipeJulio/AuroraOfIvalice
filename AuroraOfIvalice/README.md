@@ -84,14 +84,14 @@ The maps listed below include an adjusted and less generic preset, as soon as th
 
 - [ ] Archades
 - [ ] Balfonheim
-- [x] Bhujerba
+- [x] ~~Bhujerba~~
 - [ ] Cerobi Steppe
 - [ ] Dalmasca Estersand
 - [ ] Dalmasca Westersand
 - [ ] Eruyt Village
 - [ ] Feywood
 - [ ] Giruvegan - Externals
-- [x] Giza Plains
+- [x] ~~Giza Plains~~
 - [ ] Jahara
 - [ ] Lhusu Mines - Externals
 - [ ] Mosphoran Highwaste
@@ -100,20 +100,20 @@ The maps listed below include an adjusted and less generic preset, as soon as th
 - [ ] Nalbina Dungeon - Externals
 - [ ] Nalbina Town
 - [ ] Nam-Yensa Sandsea
-- [x] Ogir-Yensa Sandsea
+- [x] ~~Ogir-Yensa Sandsea~~
 - [ ] Old Archades
 - [ ] Ozmone Plain
 - [ ] Paramina Rift
 - [ ] Pharos - Externals
-- [x] Phon Coast
-- [x] Rabanastre
+- [x] ~~Phon Coast~~
+- [x] ~~Rabanastre~~
 - [ ] Ridorana Cataract
 - [ ] Salikawood
 - [ ] Skyferry - Externals
 - [ ] Stilshrine of Miriam - Externals
-- [x] Tchita Uplands
+- [x] ~~Tchita Uplands~~
 - [ ] The Tomb of Raithwall - Externals
-- [x] Zertinan Caverns
+- [x] ~~Zertinan Caverns~~
 
 ---
 
