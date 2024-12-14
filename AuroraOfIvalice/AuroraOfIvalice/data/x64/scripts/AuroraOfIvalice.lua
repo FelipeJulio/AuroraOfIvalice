@@ -1,11 +1,9 @@
 -- Aurora of Ivalice: Made by FehDead
-
 -------------------------------------
 -- MAIN MOD
 -------------------------------------
 -- showLog              bool helper for debug
 -------------------------------------
-
 local AOISettings = {}
 local AOIPointers = {}
 local AOIMaps = {}
@@ -127,8 +125,8 @@ end
 local function persistPointers()
     for basePointer, config in pairs(AOIPointers.pointers) do
         if not AOIPointers.initialValues.pointers[basePointer] then
-            showLog(false, string.format("Aurora of Ivalice (AOI): Initial values for basePointer %X not found.",
-                basePointer))
+            showLog(false,
+                string.format("Aurora of Ivalice (AOI): Initial values for basePointer %X not found.", basePointer))
         else
             for name, data in pairs(config.offsets) do
                 local initialValueData = AOIPointers.initialValues.pointers[basePointer][name]
@@ -215,8 +213,8 @@ local function updateInitialValues()
         if value then
             AOIPointers.initialValues.staticAddresses[static.address] = value
         else
-            showLog(false, string.format(
-                "Aurora of Ivalice (AOI): Unable to read initial value from staticAddress %X.", static.address))
+            showLog(false, string.format("Aurora of Ivalice (AOI): Unable to read initial value from staticAddress %X.",
+                static.address))
         end
     end
 end
@@ -233,10 +231,9 @@ local function resetDefaultValues()
 
         for basePointer, config in pairs(AOIPointers.pointers) do
             if not AOIPointers.initialValues.pointers[basePointer] then
-                showLog(false,
-                    string.format(
-                        "Aurora of Ivalice (AOI): Initial values for basePointer %X were not updated correctly.",
-                        basePointer))
+                showLog(false, string.format(
+                    "Aurora of Ivalice (AOI): Initial values for basePointer %X were not updated correctly.",
+                    basePointer))
             else
                 showLog(false, string.format(
                     "Aurora of Ivalice (AOI): Initial values for basePointer %X successfully updated.", basePointer))
@@ -272,7 +269,7 @@ local function onMapJump(locationId, flags)
 
     AOISettings.applyedpreset = presetName
 
-    showLog(false,
+    showLog(true,
         string.format("Aurora of Ivalice (AOI): Map Loaded { preset: %s, region: %s, name: %s, mapId: %d, flags: %d }",
             AOISettings.applyedpreset, mapRegion, mapName, locationId, flags))
 
@@ -343,8 +340,7 @@ local function startPatch()
         showLog(true,
             string.format(
                 "Aurora of Ivalice (AOI) %s: Couldn't apply patch, LUA Loader v" .. AOISettings.minVer[1] .. "." ..
-                    AOISettings.minVer[2] .. "." .. AOISettings.minVer[3] .. " or higher required.",
-                AOISettings.modVer))
+                    AOISettings.minVer[2] .. "." .. AOISettings.minVer[3] .. " or higher required.", AOISettings.modVer))
         return false
     end
 
@@ -357,3 +353,31 @@ local function startPatch()
 end
 
 event.registerEventAsync("onInitDone", startPatch)
+
+-------------------------------------
+-- TEST EVENT
+-------------------------------------
+
+-- local function onOpenFile(reader, filename, flag)
+--     if filename and type(filename) == "string" then
+--         if filename:find("\\us\\WorldMap\\menumap_location") then
+
+--             showLog(true, string.format("Aurora of Ivalice (AOI): File open: %s", filename))
+
+--             AOISettings.pausePersist = true
+--             AOIPointers.initialValues = {
+--                 pointers = {},
+--                 staticAddresses = {}
+--             }
+
+--             event.executeAfterMs(500, function()
+--                 updateInitialValues()
+--                 AOISettings.pausePersist = false
+--             end)
+--         end
+--     end
+
+--     return true
+-- end
+
+-- event.registerEventAsync("onOpenFile", onOpenFile)

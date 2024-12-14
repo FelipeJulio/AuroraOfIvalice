@@ -263,72 +263,72 @@ local AOIMaps = {
     ["Bhujerba"] = {{
         id = 791,
         hasCycle = false,
-        preset = "breezy",
+        preset = "bhujerba",
         name = "Aerodrome (Bhujerba)"
     }, {
         id = 803,
         hasCycle = true,
-        preset = "breezy",
+        preset = "bhujerba",
         name = "Travica Way"
     }, {
         id = 804,
         hasCycle = true,
-        preset = "breezy",
+        preset = "bhujerba",
         name = "Cloudborne Row"
     }, {
         id = 805,
         hasCycle = true,
-        preset = "breezy",
+        preset = "bhujerba",
         name = "Miners' End"
     }, {
         id = 806,
         hasCycle = true,
-        preset = "breezy",
+        preset = "bhujerba",
         name = "Lhusu Square"
     }, {
         id = 809,
         hasCycle = true,
-        preset = "breezy",
+        preset = "bhujerba",
         name = "Khus Skygrounds"
     }, {
         id = 810,
         hasCycle = true,
-        preset = "breezy",
+        preset = "bhujerba",
         name = "Kaff Terrace"
     }, {
         id = 813,
         hasCycle = false,
-        preset = "breezy",
+        preset = "bhujerba",
         name = "Targe's Arms"
     }, {
         id = 814,
         hasCycle = false,
-        preset = "breezy",
+        preset = "bhujerba",
         name = "Rithil's Protectives"
     }, {
         id = 816,
         hasCycle = false,
-        preset = "breezy",
+        preset = "bhujerba",
         name = "Mait's Magicks"
     }, {
         id = 817,
         hasCycle = false,
-        preset = "breezy",
+        preset = "bhujerba",
         name = "Clio's Technicks"
     }, {
         id = 818,
         hasCycle = false,
-        preset = "breezy",
+        preset = "bhujerba",
         name = "Bashketi's Gambits"
     }, {
         id = 819,
         hasCycle = false,
-        preset = "breezy",
+        preset = "bhujerba",
         name = "The Staras Residence"
     }, {
         id = 820,
         hasCycle = false,
-        preset = "breezy",
+        preset = "bhujerba",
         name = "The Cloudborne"
     }},
     ["Cerobi Steppe"] = {{
@@ -1518,87 +1518,87 @@ local AOIMaps = {
     ["Giza Plains"] = {{
         id = 236,
         hasCycle = true,
-        preset = "ambar",
+        preset = "gizaPlainsDry",
         name = "Throne Road (Dry)"
     }, {
         id = 237,
         hasCycle = true,
-        preset = "ambar",
+        preset = "gizaPlainsDry",
         name = "Warrior's Wash (Dry)"
     }, {
         id = 238,
         hasCycle = true,
-        preset = "ambar",
+        preset = "gizaPlainsDry",
         name = "Gizas North Bank (Dry)"
     }, {
         id = 239,
         hasCycle = true,
-        preset = "ambar",
+        preset = "gizaPlainsDry",
         name = "Toam Hills (Dry)"
     }, {
         id = 243,
         hasCycle = true,
-        preset = "ambar",
+        preset = "gizaPlainsDry",
         name = "Nomad Village (Dry)"
     }, {
         id = 247,
         hasCycle = true,
-        preset = "ambar",
+        preset = "gizaPlainsDry",
         name = "Starfall Field (Dry)"
     }, {
         id = 248,
         hasCycle = true,
-        preset = "ambar",
+        preset = "gizaPlainsDry",
         name = "Crystal Glade (Dry)"
     }, {
         id = 249,
         hasCycle = true,
-        preset = "ambar",
+        preset = "gizaPlainsDry",
         name = "Gizas South Bank (Dry)"
     }, {
         id = 253,
         hasCycle = true,
-        preset = "sunny",
+        preset = "gizaPlainsRainy",
         name = "Throne Road (Rainy)"
     }, {
         id = 254,
         hasCycle = true,
-        preset = "sunny",
+        preset = "gizaPlainsRainy",
         name = "Warrior's Wash (Rainy)"
     }, {
         id = 255,
         hasCycle = true,
-        preset = "sunny",
+        preset = "gizaPlainsRainy",
         name = "Gizas North Bank (Rainy)"
     }, {
         id = 256,
         hasCycle = true,
-        preset = "sunny",
+        preset = "gizaPlainsRainy",
         name = "Toam Hills (Rainy)"
     }, {
         id = 260,
         hasCycle = true,
-        preset = "sunny",
+        preset = "gizaPlainsRainy",
         name = "Nomad Village (Rainy)"
     }, {
         id = 264,
         hasCycle = true,
-        preset = "sunny",
+        preset = "gizaPlainsRainy",
         name = "Starfall Field  (Rainy)"
     }, {
         id = 265,
         hasCycle = true,
-        preset = "sunny",
+        preset = "gizaPlainsRainy",
         name = "Crystal Glade  (Rainy)"
     }, {
         id = 266,
         hasCycle = true,
-        preset = "sunny",
+        preset = "gizaPlainsRainy",
         name = "Gizas South Bank (Rainy)"
     }, {
         id = 270,
         hasCycle = true,
-        preset = "sunny",
+        preset = "gizaPlainsRainy",
         name = "Tracks of the Beast (Rainy)"
     }},
     ["Golmore Jungle"] = {{
@@ -2157,47 +2157,47 @@ local AOIMaps = {
     ["Ogir-Yensa Sandsea"] = {{
         id = 379,
         hasCycle = true,
-        preset = "ambar",
+        preset = "ogirYensaSandsea",
         name = "Platform 1 - East Tanks"
     }, {
         id = 380,
         hasCycle = true,
-        preset = "ambar",
+        preset = "ogirYensaSandsea",
         name = "Platform 1 - Refinery"
     }, {
         id = 381,
         hasCycle = true,
-        preset = "ambar",
+        preset = "ogirYensaSandsea",
         name = "East Junction"
     }, {
         id = 382,
         hasCycle = true,
-        preset = "ambar",
+        preset = "ogirYensaSandsea",
         name = "Primary Tank Complex"
     }, {
         id = 383,
         hasCycle = true,
-        preset = "ambar",
+        preset = "ogirYensaSandsea",
         name = "Central Junction"
     }, {
         id = 384,
         hasCycle = true,
-        preset = "ambar",
+        preset = "ogirYensaSandsea",
         name = "Platform 1 - South Tanks"
     }, {
         id = 385,
         hasCycle = true,
-        preset = "ambar",
+        preset = "ogirYensaSandsea",
         name = "Platform 2 - Refinery"
     }, {
         id = 386,
         hasCycle = true,
-        preset = "ambar",
+        preset = "ogirYensaSandsea",
         name = "Yensa Border Tunnel"
     }, {
         id = 387,
         hasCycle = true,
-        preset = "ambar",
+        preset = "ogirYensaSandsea",
         name = "South Tank Approach"
     }},
     ["Old Archades"] = {{
@@ -2478,153 +2478,153 @@ local AOIMaps = {
     ["Phon Coast"] = {{
         id = 478,
         hasCycle = true,
-        preset = "sunny",
+        preset = "phonCoast",
         name = "The Reseta Strand"
     }, {
         id = 479,
         hasCycle = true,
-        preset = "sunny",
+        preset = "phonCoast",
         name = "Pora-Pora Sands"
     }, {
         id = 480,
         hasCycle = true,
-        preset = "sunny",
+        preset = "phonCoast",
         name = "The Mauleia Strand"
     }, {
         id = 481,
         hasCycle = true,
-        preset = "sunny",
+        preset = "phonCoast",
         name = "Cape Uahuk"
     }, {
         id = 482,
         hasCycle = true,
-        preset = "sunny",
+        preset = "phonCoast",
         name = "Cape Tialan"
     }, {
         id = 483,
         hasCycle = true,
-        preset = "sunny",
+        preset = "phonCoast",
         name = "Kaukula Pass"
     }, {
         id = 484,
         hasCycle = true,
-        preset = "sunny",
+        preset = "phonCoast",
         name = "The Hakawea Shore"
     }, {
         id = 488,
         hasCycle = true,
-        preset = "sunny",
+        preset = "phonCoast",
         name = "Hunters' Camp"
     }, {
         id = 491,
         hasCycle = true,
-        preset = "sunny",
+        preset = "phonCoast",
         name = "Caima Hills"
     }, {
         id = 492,
         hasCycle = true,
-        preset = "sunny",
+        preset = "phonCoast",
         name = "The Vaddu Strand"
     }, {
         id = 493,
         hasCycle = true,
-        preset = "sunny",
+        preset = "phonCoast",
         name = "Limatra Hills"
     }, {
         id = 494,
         hasCycle = true,
-        preset = "sunny",
+        preset = "phonCoast",
         name = "Rava's Pass"
     }},
     ["Rabanastre"] = {{
         id = 50,
         hasCycle = false,
-        preset = "sunny",
+        preset = "rabanastre",
         name = "Reks's Hospital Room"
     }, {
         id = 289,
         hasCycle = true,
-        preset = "sunny",
+        preset = "rabanastre",
         name = "North End"
     }, {
         id = 290,
         hasCycle = true,
-        preset = "sunny",
+        preset = "rabanastre",
         name = "Muthru Bazaar"
     }, {
         id = 291,
         hasCycle = true,
-        preset = "sunny",
+        preset = "rabanastre",
         name = "East End"
     }, {
         id = 292,
         hasCycle = true,
-        preset = "sunny",
+        preset = "rabanastre",
         name = "Southern Plaza"
     }, {
         id = 295,
         hasCycle = false,
-        preset = "sunny",
+        preset = "rabanastre",
         name = "Amal's Weaponry"
     }, {
         id = 296,
         hasCycle = false,
-        preset = "sunny",
+        preset = "rabanastre",
         name = "Panamis's Protectives"
     }, {
         id = 297,
         hasCycle = false,
-        preset = "sunny",
+        preset = "rabanastre",
         name = "Migelo's Sundries"
     }, {
         id = 298,
         hasCycle = false,
-        preset = "sunny",
+        preset = "rabanastre",
         name = "Yugri's Magicks"
     }, {
         id = 299,
         hasCycle = false,
-        preset = "sunny",
+        preset = "rabanastre",
         name = "Batahn's Technicks"
     }, {
         id = 300,
         hasCycle = false,
-        preset = "sunny",
+        preset = "rabanastre",
         name = "Yamoora's Gambits"
     }, {
         id = 301,
         hasCycle = false,
-        preset = "sunny",
+        preset = "rabanastre",
         name = "Samalzalam Manor"
     }, {
         id = 302,
         hasCycle = false,
-        preset = "sunny",
+        preset = "rabanastre",
         name = "The Clan Hall"
     }, {
         id = 304,
         hasCycle = false,
-        preset = "sunny",
+        preset = "rabanastre",
         name = "The Sandsea"
     }, {
         id = 305,
         hasCycle = true,
-        preset = "sunny",
+        preset = "rabanastreGates",
         name = "Eastgate"
     }, {
         id = 306,
         hasCycle = true,
-        preset = "sunny",
+        preset = "rabanastreGates",
         name = "Southgate"
     }, {
         id = 307,
         hasCycle = true,
-        preset = "sunny",
+        preset = "rabanastreGates",
         name = "Westgate"
     }, {
         id = 788,
         hasCycle = false,
-        preset = "sunny",
+        preset = "rabanastre",
         name = "Aerodrome (Rabanstre)"
     }},
     ["Ridorana Cataract"] = {{
@@ -2896,62 +2896,62 @@ local AOIMaps = {
     ["Tchita Uplands"] = {{
         id = 137,
         hasCycle = true,
-        preset = "sunny",
+        preset = "tchitaUplands",
         name = "Uazcuff Hills"
     }, {
         id = 138,
         hasCycle = true,
-        preset = "sunny",
+        preset = "tchitaUplands",
         name = "Sundered Earth"
     }, {
         id = 139,
         hasCycle = true,
-        preset = "sunny",
+        preset = "tchitaUplands",
         name = "The Highlands"
     }, {
         id = 140,
         hasCycle = true,
-        preset = "sunny",
+        preset = "tchitaUplands",
         name = "Fields of Eternity"
     }, {
         id = 141,
         hasCycle = true,
-        preset = "sunny",
+        preset = "tchitaUplands",
         name = "The Shaded Path"
     }, {
         id = 142,
         hasCycle = true,
-        preset = "sunny",
+        preset = "tchitaUplands",
         name = "The Chosen Path"
     }, {
         id = 144,
         hasCycle = true,
-        preset = "sunny",
+        preset = "tchitaUplands",
         name = "The Skytrail"
     }, {
         id = 145,
         hasCycle = true,
-        preset = "sunny",
+        preset = "tchitaUplands",
         name = "Realm of the Elder Dream"
     }, {
         id = 146,
         hasCycle = true,
-        preset = "sunny",
+        preset = "tchitaUplands",
         name = "The Lost Way"
     }, {
         id = 147,
         hasCycle = true,
-        preset = "sunny",
+        preset = "tchitaUplands",
         name = "Garden of Life's Circle"
     }, {
         id = 148,
         hasCycle = true,
-        preset = "sunny",
+        preset = "tchitaUplands",
         name = "Oliphzak Rise"
     }, {
         id = 149,
         hasCycle = true,
-        preset = "sunny",
+        preset = "tchitaUplands",
         name = "The Nameless Spring"
     }},
     ["The Tomb of Raithwall"] = {{
@@ -2998,52 +2998,52 @@ local AOIMaps = {
     ["Zertinan Caverns"] = {{
         id = 576,
         hasCycle = true,
-        preset = "cavern",
+        preset = "zertinanCaverns",
         name = "Invitation to Heresy"
     }, {
         id = 577,
         hasCycle = true,
-        preset = "cavern",
+        preset = "zertinanCaverns",
         name = "Sandfalls"
     }, {
         id = 578,
         hasCycle = true,
-        preset = "cavern",
+        preset = "zertinanCaverns",
         name = "Hourglass Basin"
     }, {
         id = 581,
         hasCycle = true,
-        preset = "cavern",
+        preset = "zertinanCaverns",
         name = "The Undershore"
     }, {
         id = 582,
         hasCycle = true,
-        preset = "cavern",
+        preset = "zertinanCaverns",
         name = "Halls of Ardent Darkness"
     }, {
         id = 585,
         hasCycle = true,
-        preset = "cavern",
+        preset = "zertinanCaverns",
         name = "The Balamka Fault"
     }, {
         id = 586,
         hasCycle = true,
-        preset = "cavern",
+        preset = "zertinanCaverns",
         name = "Drybeam Cavern"
     }, {
         id = 587,
         hasCycle = true,
-        preset = "cavern",
+        preset = "zertinanCaverns",
         name = "Darkened Wharf"
     }, {
         id = 588,
         hasCycle = true,
-        preset = "cavern",
+        preset = "zertinanCaverns",
         name = "Canopy of Clay"
     }, {
         id = 590,
         hasCycle = true,
-        preset = "cavern",
+        preset = "zertinanCaverns",
         name = "Athroza Quicksands"
     }}
 }
