@@ -66,7 +66,7 @@ The maps below include a generic preset that works well on most maps
 - Achieving a true night effect would require loading textures from other maps, which is complex and incompatible with gradual texture transitions.
 
 ### Is it compatible with all mods?
-- Compatibility with all mods isn't guaranteed. However, it works well with most of Xeavin's mods.
+- Compatibility with all mods isn't guaranteed. However, it works well with most of Xeavin's mods i have installed.
 
 ### Have you ever worked with .lua or modding games before?
 - No, this is my first time both modding games and using the Lua language.
@@ -120,7 +120,8 @@ The maps listed below include an adjusted and less generic preset, as soon as th
 ## Known Issues
 
 - The sunset effect is only applied after transitioning between maps.
-- Teleportation between maps may cause maps to appear darker than intended. This is a known issue without an easy fix currently.
+- Some maps may appear darker than expected, and this will be corrected as I finish the specific presets for each map.
+- Teleportation between maps may cause maps to appear darker than intended. This is a known issue without an easy fix currently. It may be necessary to exit the map and enter again to reload the preset.
 
 ---
 
@@ -143,9 +144,15 @@ A heartfelt thanks to the following individuals for their help and encouragement
 
 ## Installation
 
-1. Go to the [releases page](https://github.com/FelipeJulio/AuroraOfIvalice/releases) and download the latest release of `AuroraOfIvalice.zip`
-2. Install `AuroraOfIvalice.zip` with Vortex or Paste files at `FINAL FANTASY XII THE ZODIAC AGE\x64\scripts`
-4. Launch the game and enjoy!
+1. Go to the [releases page](https://github.com/FelipeJulio/AuroraOfIvalice/releases) and download the latest release of `AuroraOfIvalice.zip`.
+2. Installation options:
+   2.1. To install using Vortex, simply load the `AuroraOfIvalice.zip` file. Learn more about Vortex [here](https://www.nexusmods.com/about/vortex).
+   2.2. For manual installation, extract the zip file and copy the files from the `data\x64\scripts` folder into yout game folder, like `FINAL FANTASY XII THE ZODIAC AGE\x64\scripts`.
+3. Launch the game and enjoy!
+
+**Note:** The following mods are required prerequisites and must be installed for `AuroraOfIvalice` to function properly:
+- [FF12 External File Loader](https://www.nexusmods.com/finalfantasy12/mods/170)
+- [FF12 LUA Loader](https://www.nexusmods.com/finalfantasy12/mods/171)
 
 ---
 
