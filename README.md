@@ -135,13 +135,6 @@ A heartfelt thanks to the following individuals for their help and encouragement
 
 ---
 
-## Tools Used
-
-- [FF12 Lua Loader](https://xeavin.gitbook.io/ff12-lua-loader)
-- [The Insurgents Toolkit](https://xeavin.gitbook.io/the-insurgents-toolkit)
-
----
-
 ## Installation
 
 1. Go to the [releases page](https://github.com/FelipeJulio/AuroraOfIvalice/releases) and download the latest release of `AuroraOfIvalice.zip`.
@@ -166,6 +159,10 @@ https://github.com/user-attachments/assets/2c8a91dd-ad61-43eb-8332-c1be79189c51
 
 https://github.com/user-attachments/assets/86962026-6c4b-48b4-bf19-7ea92a39c6c7
 
+---
 
+## Permissions
 
-
+All files contained within this repository are the property of the author or other authors whose files have been utilized under open licenses. The intellectual property rights of these files must be respected according to the terms provided by their original creators.
+- Are not permitted to distribute this mod on any platform or in any form without explicit permission from the author.
+- Making alterations, transformations, or creating derivative works based on this mod is strictly prohibited without prior consent from the author.
