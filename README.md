@@ -143,7 +143,7 @@ A heartfelt thanks to the following individuals for their help and encouragement
 
 ## Installation
 
-1. Download the mod files.
+1. Go to the [releases page](https://github.com/FelipeJulio/AuroraOfIvalice/releases) and download the latest release of `AuroraOfIvalice.zip`
 2. Install `AuroraOfIvalice.zip` with Vortex or Paste files at `FINAL FANTASY XII THE ZODIAC AGE\x64\scripts`
 4. Launch the game and enjoy!
 
