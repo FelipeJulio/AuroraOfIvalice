@@ -2282,7 +2282,7 @@ local presets = {
             description = "mMapChrAmbientOffsetB",
             limit = nil
         }}
-    },
+    }, 
 }
 
 return {

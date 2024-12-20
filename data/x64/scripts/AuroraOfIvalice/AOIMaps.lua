@@ -14,67 +14,67 @@ local AOIMaps = {
     ["Archades"] = {{
         id = 635,
         hasCycle = true,
-        preset = "sunny",
+        preset = "rabanastre",
         name = "Grand Arcade"
     }, {
         id = 636,
         hasCycle = true,
-        preset = "sunny",
+        preset = "rabanastre",
         name = "Highgarden Terrace"
     }, {
         id = 640,
         hasCycle = true,
-        preset = "sunny",
+        preset = "rabanastre",
         name = "Molberry"
     }, {
         id = 641,
         hasCycle = true,
-        preset = "sunny",
+        preset = "rabanastre",
         name = "Trant"
     }, {
         id = 642,
         hasCycle = false,
-        preset = "sunny",
+        preset = "rabanastre",
         name = "Charlotte's Magickery"
     }, {
         id = 643,
         hasCycle = false,
-        preset = "sunny",
+        preset = "rabanastre",
         name = "Bulward's Technicks"
     }, {
         id = 745,
         hasCycle = true,
-        preset = "sunny",
+        preset = "rabanastre",
         name = "Nilbasse"
     }, {
         id = 746,
         hasCycle = true,
-        preset = "sunny",
+        preset = "rabanastre",
         name = "Rienna"
     }, {
         id = 747,
         hasCycle = false,
-        preset = "sunny",
+        preset = "rabanastre",
         name = "Vint's Armaments"
     }, {
         id = 748,
         hasCycle = false,
-        preset = "sunny",
+        preset = "rabanastre",
         name = "Granch's Requisites"
     }, {
         id = 749,
         hasCycle = false,
-        preset = "sunny",
+        preset = "rabanastre",
         name = "Lebleu's Gambits"
     }, {
         id = 756,
         hasCycle = true,
-        preset = "sunny",
+        preset = "rabanastre",
         name = "Tsenoble"
     }, {
         id = 794,
         hasCycle = false,
-        preset = "sunny",
+        preset = "rabanastre",
         name = "Aerodrome (Archades)"
     }},
     ["Bahamut"] = {{
@@ -116,62 +116,62 @@ local AOIMaps = {
     ["Balfonheim"] = {{
         id = 797,
         hasCycle = false,
-        preset = "sunny",
+        preset = "rabanastreGates",
         name = "Aerodrome (Balfonheim)"
     }, {
         id = 823,
         hasCycle = true,
-        preset = "sunny",
+        preset = "rabanastreGates",
         name = "Sea Breeze Lane"
     }, {
         id = 824,
         hasCycle = true,
-        preset = "sunny",
+        preset = "rabanastreGates",
         name = "Gallerina Marketplace"
     }, {
         id = 825,
         hasCycle = true,
-        preset = "sunny",
+        preset = "rabanastreGates",
         name = "Quayside Court"
     }, {
         id = 826,
         hasCycle = true,
-        preset = "sunny",
+        preset = "rabanastreGates",
         name = "Saccio Lane"
     }, {
         id = 827,
         hasCycle = true,
-        preset = "sunny",
+        preset = "rabanastreGates",
         name = "Chivany Breakwater"
     }, {
         id = 828,
         hasCycle = true,
-        preset = "sunny",
+        preset = "rabanastreGates",
         name = "Canal Lane"
     }, {
         id = 833,
         hasCycle = false,
-        preset = "sunny",
+        preset = "rabanastreGates",
         name = "Beruny's Armaments"
     }, {
         id = 834,
         hasCycle = false,
-        preset = "sunny",
+        preset = "rabanastreGates",
         name = "Odo's Technicks"
     }, {
         id = 835,
         hasCycle = false,
-        preset = "sunny",
+        preset = "rabanastreGates",
         name = "Port Villa (1)"
     }, {
         id = 836,
         hasCycle = false,
-        preset = "sunny",
+        preset = "rabanastreGates",
         name = "The Whitecap"
     }, {
         id = 837,
         hasCycle = false,
-        preset = "sunny",
+        preset = "rabanastreGates",
         name = "Port Villa (2)"
     }},
     ["Barheim Passage"] = {{
@@ -334,42 +334,42 @@ local AOIMaps = {
     ["Cerobi Steppe"] = {{
         id = 497,
         hasCycle = true,
-        preset = "sunny",
+        preset = "tchitaUplands",
         name = "Old Elanise Road"
     }, {
         id = 498,
         hasCycle = true,
-        preset = "sunny",
+        preset = "tchitaUplands",
         name = "Crossfield"
     }, {
         id = 499,
         hasCycle = true,
-        preset = "sunny",
+        preset = "tchitaUplands",
         name = "The Terraced Bank"
     }, {
         id = 500,
         hasCycle = true,
-        preset = "sunny",
+        preset = "tchitaUplands",
         name = "Journey's Rest"
     }, {
         id = 503,
         hasCycle = true,
-        preset = "sunny",
+        preset = "tchitaUplands",
         name = "North Liavell Hills"
     }, {
         id = 504,
         hasCycle = true,
-        preset = "sunny",
+        preset = "tchitaUplands",
         name = "South Liavell Hills"
     }, {
         id = 505,
         hasCycle = true,
-        preset = "sunny",
+        preset = "tchitaUplands",
         name = "Feddik River"
     }, {
         id = 506,
         hasCycle = true,
-        preset = "sunny",
+        preset = "tchitaUplands",
         name = "The Northsward"
     }},
     ["Dalmasca Estersand"] = {{
@@ -2255,47 +2255,47 @@ local AOIMaps = {
     ["Paramina Rift"] = {{
         id = 463,
         hasCycle = true,
-        preset = "sunny",
+        preset = "tchitaUplands",
         name = "Fading Vale"
     }, {
         id = 464,
         hasCycle = true,
-        preset = "sunny",
+        preset = "tchitaUplands",
         name = "Head of the Silverflow"
     }, {
         id = 465,
         hasCycle = true,
-        preset = "sunny",
+        preset = "tchitaUplands",
         name = "Freezing Gorge"
     }, {
         id = 468,
         hasCycle = true,
-        preset = "sunny",
+        preset = "tchitaUplands",
         name = "Frozen Brook"
     }, {
         id = 469,
         hasCycle = true,
-        preset = "sunny",
+        preset = "tchitaUplands",
         name = "Icebound Flow"
     }, {
         id = 470,
         hasCycle = true,
-        preset = "sunny",
+        preset = "tchitaUplands",
         name = "Karydine Glacier"
     }, {
         id = 473,
         hasCycle = true,
-        preset = "sunny",
+        preset = "tchitaUplands",
         name = "Path of the Firstfall"
     }, {
         id = 474,
         hasCycle = true,
-        preset = "sunny",
+        preset = "tchitaUplands",
         name = "Spine of the Icewyrm"
     }, {
         id = 475,
         hasCycle = true,
-        preset = "sunny",
+        preset = "tchitaUplands",
         name = "Silverflow's End"
     }},
     ["Pharos"] = {{
@@ -2825,72 +2825,72 @@ local AOIMaps = {
     ["Stilshrine of Miriam"] = {{
         id = 593,
         hasCycle = true,
-        preset = "sunny",
+        preset = "tchitaUplands",
         name = "Walk of Sky"
     }, {
         id = 594,
         hasCycle = true,
-        preset = "sunny",
+        preset = "tchitaUplands",
         name = "Walk of Mind"
     }, {
         id = 597,
         hasCycle = false,
-        preset = "sunny",
+        preset = "tchitaUplands",
         name = "Ward of Measure"
     }, {
         id = 598,
         hasCycle = false,
-        preset = "sunny",
+        preset = "tchitaUplands",
         name = "Cold Distance"
     }, {
         id = 599,
         hasCycle = false,
-        preset = "sunny",
+        preset = "tchitaUplands",
         name = "Walk of Prescience"
     }, {
         id = 600,
         hasCycle = false,
-        preset = "sunny",
+        preset = "tchitaUplands",
         name = "Walk of Reason"
     }, {
         id = 603,
         hasCycle = false,
-        preset = "sunny",
+        preset = "tchitaUplands",
         name = "Ward of Steel"
     }, {
         id = 606,
         hasCycle = false,
-        preset = "sunny",
+        preset = "tchitaUplands",
         name = "Ward of Velitation"
     }, {
         id = 607,
         hasCycle = false,
-        preset = "sunny",
+        preset = "tchitaUplands",
         name = "Walk of Torn Illusion"
     }, {
         id = 608,
         hasCycle = false,
-        preset = "sunny",
+        preset = "tchitaUplands",
         name = "Walk of Revelation"
     }, {
         id = 609,
         hasCycle = false,
-        preset = "sunny",
+        preset = "tchitaUplands",
         name = "Ward of the Sword-King"
     }, {
         id = 612,
         hasCycle = false,
-        preset = "sunny",
+        preset = "tchitaUplands",
         name = "Hall of Worth"
     }, {
         id = 615,
         hasCycle = false,
-        preset = "sunny",
+        preset = "tchitaUplands",
         name = "Vault of the Champion"
     }, {
         id = 618,
         hasCycle = false,
-        preset = "sunny",
+        preset = "tchitaUplands",
         name = "Throne of Veiled Gods"
     }},
     ["Tchita Uplands"] = {{

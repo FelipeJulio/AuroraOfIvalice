@@ -15,7 +15,7 @@
 -------------------------------------
 
 local AOISettings = {
-    modVer =  "v0.0.2-beta",
+    modVer =  "v1.0.0",
     minVer = {1, 5, 1},
     disableMod = false,
     disableCycle = false,
