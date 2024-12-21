@@ -9,7 +9,7 @@ Aurora Of Ivalice (AOI) is a dynamic sunset system mod that gradually alters the
 - **Dynamic Sunset System**: Over a span of 20 minutes, the mod gradually applies post-processing changes, transitioning the map visuals to a sunset effect.
 - **Time Persistence**: The time progression is stored and carried across map transitions, ensuring the presets are applied based on the current time.
 - **Presets for Various Maps**: Includes well-tuned presets for most open-world maps, tailored for a visually pleasing experience.
-- **Exposed Progression Values**: For those who wish to use progression values in their own mods, refer to the "Exposed Values" section below.
+- **Exposed Progression Values**: For those who wish to use progression values in their own mods, refer to the ["Exposed Values"](#exposed-values) section below.
 
 ## FAQs
 
