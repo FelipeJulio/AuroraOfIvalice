@@ -18,8 +18,12 @@ end
 -- LOAD EXTERNAL FILES
 -------------------------------------
 
+local function getConfigEnv()
+    return setmetatable({}, {__index = _G})
+end
+
 local function loadExternalFile(path, description)
-    local file, err = loadfile(path, "t", {})
+    local file, err = loadfile(path, "t", getConfigEnv())
     if not file then
         showLog(true, string.format("Aurora of Ivalice (AOI): Failed to load %s: %s", description, err))
         return nil
@@ -29,6 +33,7 @@ local function loadExternalFile(path, description)
         showLog(true, string.format("Aurora of Ivalice (AOI): Failed to execute %s: %s", description, result))
         return nil
     end
+    showLog(true, string.format("Aurora of Ivalice (AOI): Successfully loaded %s", description))
     return result
 end
 
@@ -58,7 +63,7 @@ local function loadSettings()
     local path = "scripts/AuroraOfIvalice/AOISettings.lua"
     AOISettings = loadExternalFile(path, "AOISettings") or {}
     return AOISettings ~= nil
-end
+end 
 
 local function loadMaps()
     local path = "scripts/AuroraOfIvalice/AOIMaps.lua"
@@ -78,6 +83,81 @@ local function applyPreset(presetName)
 
     AOIPointers.pointers = preset.pointers or {}
     AOIPointers.staticAddresses = preset.staticAddresses or {}
+end
+
+-------------------------------------
+-- EXPOSE CONDITIONS
+-------------------------------------
+
+local function writeExposedValuesToFile(values)
+    local path = "scripts/config/AuroraOfIvalice/AOIExposedValues.lua"
+    local file, err = io.open(path, "w")
+    if not file then
+        showLog(true, "Aurora of Ivalice: Couldn't write to AOIExposedValues.lua: " .. err)
+        return
+    end
+
+    file:write("-- Aurora of Ivalice: Made by FehDead\n")
+    file:write("-------------------------------------\n")
+    file:write("-- EXPOSE CONDITIONS\n")
+    file:write("-------------------------------------\n")
+    file:write("_G.AOIExposedValues = {\n")
+    file:write(string.format("    AOIActive = %s,\n", values.AOIActive or "false"))
+    file:write(string.format("    AOIProgress = %s,\n", values.AOIProgress or "nil"))
+    file:write(string.format("    AOIDirection = \"%s\",\n", values.AOIDirection or "unknown"))
+    file:write(string.format("    AOICondition = \"%s\",\n", values.AOICondition or "unknown"))
+    file:write("}\n")
+    file:close()
+end
+
+local function generateExposedValues(active, progress, direction, condition)
+    return {
+        AOIActive = active,
+        AOIProgress = progress,
+        AOIDirection = direction,
+        AOICondition = condition
+    }
+end
+
+local function saveExposedValues()
+    writeExposedValuesToFile(_G.AOIExposedValues)
+end
+
+local function resetExposedValues()
+    local defaultValues = generateExposedValues(false, nil, "unknown", "unknown")
+    writeExposedValuesToFile(defaultValues)
+end
+
+local function updateCycleVariables()
+    if not AOISettings or not AOISettings.currentCycleTime or not AOISettings.totalCycleTimeMs then
+        showLog(true, "Aurora of Ivalice (AOI): Settings not initialized for cycle variables.")
+        return
+    end
+
+    local progress = math.floor((AOISettings.currentCycleTime / AOISettings.totalCycleTimeMs) * 100)
+    local direction = AOISettings.cycleDirection == 1 and "forward" or "backward"
+
+    _G.AOIExposedValues.AOIActive = true
+    _G.AOIExposedValues.AOIProgress = progress
+    _G.AOIExposedValues.AOIDirection = direction
+
+    if progress <= 33 then
+        _G.AOIExposedValues.AOICondition = "day"
+    elseif progress <= 66 then
+        _G.AOIExposedValues.AOICondition = "afternoon"
+    else
+        _G.AOIExposedValues.AOICondition = "night"
+    end 
+end
+
+local function periodicUpdate()
+    if not _G.AOIExposedValues then
+        _G.AOIExposedValues = generateExposedValues(false, nil, "unknown", "unknown")
+    end
+
+    updateCycleVariables()
+    saveExposedValues()
+    event.executeAfterMs(1000, periodicUpdate)
 end
 
 -------------------------------------
@@ -173,12 +253,14 @@ local function persistValues()
 
     persistPointers()
     persistStatics()
+    updateCycleVariables()
 
     AOISettings.currentCycleTime = AOISettings.currentCycleTime + AOISettings.updateIntervalMs
     if AOISettings.currentCycleTime >= AOISettings.totalCycleTimeMs then
         AOISettings.currentCycleTime = AOISettings.currentCycleTime % AOISettings.totalCycleTimeMs
         AOISettings.cycleDirection = -AOISettings.cycleDirection
     end
+
 end
 
 -------------------------------------
@@ -250,6 +332,7 @@ end
 -------------------------------------
 
 local function onMapJump(locationId, flags)
+
     local mapRegion = "unknown"
     local mapName = "unknown"
 
@@ -269,7 +352,7 @@ local function onMapJump(locationId, flags)
 
     AOISettings.applyedpreset = presetName
 
-    showLog(true,
+    showLog(false,
         string.format("Aurora of Ivalice (AOI): Map Loaded { preset: %s, region: %s, name: %s, mapId: %d, flags: %d }",
             AOISettings.applyedpreset, mapRegion, mapName, locationId, flags))
 
@@ -296,6 +379,8 @@ local function onMapJump(locationId, flags)
         AOISettings.pausePersist = true
     end
 
+    _G.AOIExposedValues.exposedReady = true
+
     resetDefaultValues()
 end
 
@@ -304,6 +389,7 @@ end
 -------------------------------------
 
 local function onExit()
+    resetExposedValues()
     memory.unregisterAllSymbols()
     collectgarbage()
 end
@@ -311,6 +397,7 @@ end
 local function applyPatch()
     event.executeAfterMs(3000, function()
         updateInitialValues()
+        periodicUpdate()
     end)
 
     event.registerEventAsync("onMapJump", onMapJump)
@@ -321,6 +408,9 @@ local function applyPatch()
 end
 
 local function startPatch()
+    
+    resetExposedValues()
+
     if not loadSettings() then
         showLog(true, string.format("Aurora of Ivalice (AOI): Couldn't load AOISettings.lua"))
         return false
@@ -349,7 +439,7 @@ local function startPatch()
         return false
     end
 
-    applyPatch()
+    applyPatch() 
 end
 
 event.registerEventAsync("onInitDone", startPatch)

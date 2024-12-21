@@ -2,15 +2,14 @@
 
 Aurora Of Ivalice (AOI) is a dynamic sunset system mod that gradually alters the visual post-processing of the game over time, giving maps a sunset effect.
 
----
+![Demo Animation](assets/demo.avif)
 
 ## Features
 
 - **Dynamic Sunset System**: Over a span of 20 minutes, the mod gradually applies post-processing changes, transitioning the map visuals to a sunset effect.
 - **Time Persistence**: The time progression is stored and carried across map transitions, ensuring the presets are applied based on the current time.
 - **Presets for Various Maps**: Includes well-tuned presets for most open-world maps, tailored for a visually pleasing experience.
-
----
+- **Exposed Progression Values**: For those who wish to use progression values in their own mods, refer to the "Exposed Values" section below.
 
 ## FAQs
 
@@ -68,55 +67,6 @@ The maps below include a generic preset that works well on most maps
 ### Is it compatible with all mods?
 - Compatibility with all mods isn't guaranteed. However, it works well with most of Xeavin's mods i have installed.
 
-### Have you ever worked with .lua or modding games before?
-- No, this is my first time both modding games and using the Lua language.
-
-### What are the next updates?
-- Enhance and refine presets to be naturally darker
-- Create presets for each region (set of maps) so that everything looks more natural
-
-### What are the future plans?
-- Exposing the time and cycle percent (day, evening, night) for use in other mods, such as stronger monsters during nighttime periods.
-- Study how to work with textures and global lighting to further enhance visuals.
-
-### Map preset progress
-The maps listed below include an adjusted and less generic preset, as soon as they are all completed the mod will no longer be an beta-version and will possibly be on Nexus Mods.
-
-- [ ] Archades
-- [ ] Balfonheim
-- [x] ~~Bhujerba~~
-- [ ] Cerobi Steppe
-- [ ] Dalmasca Estersand
-- [ ] Dalmasca Westersand
-- [ ] Eruyt Village
-- [ ] Feywood
-- [ ] Giruvegan - Externals
-- [x] ~~Giza Plains~~
-- [ ] Jahara
-- [ ] Lhusu Mines - Externals
-- [ ] Mosphoran Highwaste
-- [ ] Mt. Bur-Omisace
-- [ ] Nabreus Deadlands
-- [ ] Nalbina Dungeon - Externals
-- [ ] Nalbina Town
-- [ ] Nam-Yensa Sandsea
-- [x] ~~Ogir-Yensa Sandsea~~
-- [ ] Old Archades
-- [ ] Ozmone Plain
-- [ ] Paramina Rift
-- [ ] Pharos - Externals
-- [x] ~~Phon Coast~~
-- [x] ~~Rabanastre~~
-- [ ] Ridorana Cataract
-- [ ] Salikawood
-- [ ] Skyferry - Externals
-- [ ] Stilshrine of Miriam - Externals
-- [x] ~~Tchita Uplands~~
-- [ ] The Tomb of Raithwall - Externals
-- [x] ~~Zertinan Caverns~~
-
----
-
 ## Known Issues
 
 - The sunset effect is only applied after transitioning between maps.
@@ -162,6 +112,76 @@ https://github.com/user-attachments/assets/2c8a91dd-ad61-43eb-8332-c1be79189c51
 https://github.com/user-attachments/assets/86962026-6c4b-48b4-bf19-7ea92a39c6c7
 
 ---
+
+## Exposed Values
+
+You can utilize the exposed values in your own mod.
+
+The following values are available to monitor the cycle:
+
+- **`AOIActive`**
+  - Type: **`boolean`**
+  - Description: Indicates whether the other cycle values are ready for use.
+  - Behavior:
+    - **`true`**: The cycle has started, and the other values (`AOIProgress`, `AOIDirection`, `AOICondition`) will be available.
+    - **`false`**: The cycle has not started yet, and the other values will not be accessible.
+
+- **`AOIProgress`**
+  - Type: **`number`**
+  - Description: Represents the percentage progress of the cycle, ranging from **`0`** to **`100`**.
+  - Behavior:
+    - During an active cycle, this value is a number between **`0`** and **`100`**.
+    - When the cycle is not initialized, the value will be **`nil`**.
+
+- **`AOIDirection`**
+  - Type: **`string`**
+  - Description: Indicates the cycle's direction, simulating dawn and dusk.
+  - Behavior:
+    - When initialized, it returns **`"forward"`** (progressing towards "day") or **`"backward"`** (receding towards "night").
+    - When the cycle is not initialized, it returns **`"unknown"`**.
+
+- **`AOICondition`**
+  - Type: **`string`**
+  - Description: Defines the current condition of the cycle.
+  - Behavior:
+    - When initialized, it returns values such as:
+      - **`"day"`**: Day condition.
+      - **`"afternoon"`**: Afternoon condition.
+      - **`"night"`**: Night condition.
+    - When the cycle is not initialized, it returns **`"unknown"`**.
+
+Example usage:
+
+```lua
+local AOIExposedValues = "scripts/config/AuroraOfIvalice/AOIExposedValues.lua"
+
+local function loadAOIValues()
+    local file = loadfile(AOIExposedValues)
+    if file then
+        pcall(file)
+        return _G.AOIExposedValues
+    end
+end
+
+local function getAOIValues()
+
+    local values = loadAOIValues()
+
+    if values and values.AOIActive then
+        print(string.format("Cycle Progress: %s", values.AOIProgress))
+        print(string.format("Cycle Direction: %s", values.AOIDirection))
+        print(string.format("Cycle Condition: %s", values.AOICondition))
+        event.executeAfterMs(1000, getAOIValues)
+    else
+        event.executeAfterMs(1000, getAOIValues)
+    end
+end
+
+event.registerEventAsync("onInitDone", function()
+    event.executeAfterMs(1000, getAOIValues)
+end)
+
+```
 
 ## Permissions
 
