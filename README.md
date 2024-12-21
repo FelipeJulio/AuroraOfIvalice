@@ -69,9 +69,7 @@ The maps below include a generic preset that works well on most maps
 
 ## Known Issues
 
-- The sunset effect is only applied after transitioning between maps.
-- Some maps may appear darker than expected, and this will be corrected as I finish the specific presets for each map.
-- Teleportation between maps may cause maps to appear darker than intended. This is a known issue without an easy fix currently. It may be necessary to exit the map and enter again to reload the preset.
+- Teleportation between maps may cause maps to appear darker than intended. It may be necessary to exit the map and enter again to reload the preset.
 
 ---
 
