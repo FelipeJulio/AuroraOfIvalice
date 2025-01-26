@@ -77,7 +77,19 @@ local presets = {
                         type = "decrement",
                         value = 0.8999,
                         limit = nil
-                    } -- Cast shadow
+                    },
+                    mShadowValueLerpMinForMap = {
+                        offset = 0x140,
+                        type = "decrement",
+                        value = 0.15,
+                        limit = nil
+                    },
+                    mShadowValueLerpMinForChr = {
+                        offset = 0x144,
+                        type = "decrement",
+                        value = 0.15,
+                        limit = nil
+                    }
                 }
             },
             [0x01F81168] = { -- (Second Basic Info)
@@ -238,7 +250,19 @@ local presets = {
                         type = "decrement",
                         value = 0.8999,
                         limit = nil
-                    } -- Cast shadow
+                    },
+                    mShadowValueLerpMinForMap = {
+                        offset = 0x140,
+                        type = "decrement",
+                        value = 0.15,
+                        limit = nil
+                    },
+                    mShadowValueLerpMinForChr = {
+                        offset = 0x144,
+                        type = "decrement",
+                        value = 0.15,
+                        limit = nil
+                    }
                 }
             },
             [0x01F81168] = { -- (Second Basic Info)
@@ -399,7 +423,19 @@ local presets = {
                         type = "decrement",
                         value = 0.8999,
                         limit = nil
-                    } -- Cast shadow
+                    },
+                    mShadowValueLerpMinForMap = {
+                        offset = 0x140,
+                        type = "decrement",
+                        value = 0.15,
+                        limit = nil
+                    },
+                    mShadowValueLerpMinForChr = {
+                        offset = 0x144,
+                        type = "decrement",
+                        value = 0.15,
+                        limit = nil
+                    }
                 }
             },
             [0x01F81168] = { -- (Second Basic Info)
@@ -555,7 +591,19 @@ local presets = {
                         type = "decrement",
                         value = 0.1999,
                         limit = nil
-                    } -- Cast shadow
+                    },
+                    mShadowValueLerpMinForMap = {
+                        offset = 0x140,
+                        type = "decrement",
+                        value = 0.15,
+                        limit = nil
+                    },
+                    mShadowValueLerpMinForChr = {
+                        offset = 0x144,
+                        type = "decrement",
+                        value = 0.15,
+                        limit = nil
+                    }
                 }
             },
             [0x01F81168] = { -- (Second Basic Info)
@@ -717,7 +765,19 @@ local presets = {
                         type = "decrement",
                         value = 0.8999,
                         limit = nil
-                    } -- Cast shadow
+                    },
+                    mShadowValueLerpMinForMap = {
+                        offset = 0x140,
+                        type = "decrement",
+                        value = 0.15,
+                        limit = nil
+                    },
+                    mShadowValueLerpMinForChr = {
+                        offset = 0x144,
+                        type = "decrement",
+                        value = 0.15,
+                        limit = nil
+                    }
                 }
             },
             [0x01F81168] = { -- (Second Basic Info)
@@ -876,7 +936,19 @@ local presets = {
                         type = "decrement",
                         value = 0.1999,
                         limit = nil
-                    } -- Cast shadow
+                    },
+                    mShadowValueLerpMinForMap = {
+                        offset = 0x140,
+                        type = "decrement",
+                        value = 0.15,
+                        limit = nil
+                    },
+                    mShadowValueLerpMinForChr = {
+                        offset = 0x144,
+                        type = "decrement",
+                        value = 0.15,
+                        limit = nil
+                    }
                 }
             },
             [0x01F81168] = { -- (Second Basic Info)
@@ -1039,7 +1111,19 @@ local presets = {
                         type = "decrement",
                         value = 0.8999,
                         limit = nil
-                    } -- Cast shadow
+                    },
+                    mShadowValueLerpMinForMap = {
+                        offset = 0x140,
+                        type = "decrement",
+                        value = 0.15,
+                        limit = nil
+                    },
+                    mShadowValueLerpMinForChr = {
+                        offset = 0x144,
+                        type = "decrement",
+                        value = 0.15,
+                        limit = nil
+                    }
                 }
             },
             [0x01F81168] = { -- (Second Basic Info)
@@ -1219,6 +1303,18 @@ local presets = {
                         type = "decrement",
                         value = 0.8999,
                         limit = nil
+                    },
+                    mShadowValueLerpMinForMap = {
+                        offset = 0x140,
+                        type = "decrement",
+                        value = 0.15,
+                        limit = nil
+                    },
+                    mShadowValueLerpMinForChr = {
+                        offset = 0x144,
+                        type = "decrement",
+                        value = 0.15,
+                        limit = nil
                     }
                 }
             },
@@ -1381,7 +1477,19 @@ local presets = {
                         type = "decrement",
                         value = 0.8999,
                         limit = nil
-                    } -- Cast shadow
+                    },
+                    mShadowValueLerpMinForMap = {
+                        offset = 0x140,
+                        type = "decrement",
+                        value = 0.15,
+                        limit = nil
+                    },
+                    mShadowValueLerpMinForChr = {
+                        offset = 0x144,
+                        type = "decrement",
+                        value = 0.15,
+                        limit = nil
+                    }
                 }
             },
             [0x01F81168] = { -- (Second Basic Info)
@@ -1556,7 +1664,19 @@ local presets = {
                         type = "decrement",
                         value = 0.8999,
                         limit = nil
-                    } -- Cast shadow
+                    },
+                    mShadowValueLerpMinForMap = {
+                        offset = 0x140,
+                        type = "decrement",
+                        value = 0.15,
+                        limit = nil
+                    },
+                    mShadowValueLerpMinForChr = {
+                        offset = 0x144,
+                        type = "decrement",
+                        value = 0.15,
+                        limit = nil
+                    }
                 }
             },
             [0x01F81168] = { -- (Second Basic Info)
@@ -1713,7 +1833,19 @@ local presets = {
                         type = "decrement",
                         value = 0.8999,
                         limit = nil
-                    } -- Cast shadow
+                    },
+                    mShadowValueLerpMinForMap = {
+                        offset = 0x140,
+                        type = "decrement",
+                        value = 0.15,
+                        limit = nil
+                    },
+                    mShadowValueLerpMinForChr = {
+                        offset = 0x144,
+                        type = "decrement",
+                        value = 0.15,
+                        limit = nil
+                    }
                 }
             },
             [0x01F81168] = { -- (Second Basic Info)
@@ -1870,7 +2002,19 @@ local presets = {
                         type = "decrement",
                         value = 0.8999,
                         limit = nil
-                    } -- Cast shadow
+                    },
+                    mShadowValueLerpMinForMap = {
+                        offset = 0x140,
+                        type = "decrement",
+                        value = 0.15,
+                        limit = nil
+                    },
+                    mShadowValueLerpMinForChr = {
+                        offset = 0x144,
+                        type = "decrement",
+                        value = 0.15,
+                        limit = nil
+                    }
                 }
             },
             [0x01F81168] = { -- (Second Basic Info)
@@ -2027,7 +2171,19 @@ local presets = {
                         type = "decrement",
                         value = 0.8999,
                         limit = nil
-                    } -- Cast shadow
+                    },
+                    mShadowValueLerpMinForMap = {
+                        offset = 0x140,
+                        type = "decrement",
+                        value = 0.15,
+                        limit = nil
+                    },
+                    mShadowValueLerpMinForChr = {
+                        offset = 0x144,
+                        type = "decrement",
+                        value = 0.15,
+                        limit = nil
+                    }
                 }
             },
             [0x01F81168] = { -- (Second Basic Info)
@@ -2189,7 +2345,19 @@ local presets = {
                         type = "decrement",
                         value = 0.8999,
                         limit = nil
-                    } -- Cast shadow
+                    },
+                    mShadowValueLerpMinForMap = {
+                        offset = 0x140,
+                        type = "decrement",
+                        value = 0.15,
+                        limit = nil
+                    },
+                    mShadowValueLerpMinForChr = {
+                        offset = 0x144,
+                        type = "decrement",
+                        value = 0.15,
+                        limit = nil
+                    }
                 }
             },
             [0x01F81168] = { -- (Second Basic Info)
@@ -2282,7 +2450,7 @@ local presets = {
             description = "mMapChrAmbientOffsetB",
             limit = nil
         }}
-    }, 
+    }
 }
 
 return {
