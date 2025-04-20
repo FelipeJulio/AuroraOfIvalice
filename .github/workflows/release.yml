@@ -6,23 +6,29 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-20.04 
+    runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
-    - name: Install zip
-      run: sudo apt-get install zip
+      - name: Debug - Verificar conteúdo do repositório
+        run: ls -R
 
-    - name: Zip specific folders
-      run: |
-        zip -r AuroraOfIvalice-${{ github.event.release.tag_name }}.zip data fomod
+      - name: Compactar pastas data e fomod
+        run: |
+          if [ -d "data" ] && [ -d "fomod" ]; then
+            zip -r AuroraOfIvalice-${{ github.event.release.tag_name }}.zip data fomod
+          else
+            echo "As pastas 'data' ou 'fomod' não foram encontradas."
+            exit 1
+          fi
 
-    - name: Upload Release Asset
-      uses: actions/upload-release-asset@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ github.event.release.upload_url }}
-        asset_path: ./AuroraOfIvalice-${{ github.event.release.tag_name }}.zip
-        asset_name: AuroraOfIvalice-${{ github.event.release.tag_name }}.zip
-        asset_content_type: application/zip
+      - name: Upload Release Asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ github.event.release.upload_url }}
+          asset_path: AuroraOfIvalice-${{ github.event.release.tag_name }}.zip
+          asset_name: AuroraOfIvalice-${{ github.event.release.tag_name }}.zip
+          asset_content_type: application/zip
