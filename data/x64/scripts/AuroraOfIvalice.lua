@@ -63,7 +63,7 @@ local function loadSettings()
     local path = "scripts/AuroraOfIvalice/AOISettings.lua"
     AOISettings = loadExternalFile(path, "AOISettings") or {}
     return AOISettings ~= nil
-end 
+end
 
 local function loadMaps()
     local path = "scripts/AuroraOfIvalice/AOIMaps.lua"
@@ -147,7 +147,7 @@ local function updateCycleVariables()
         _G.AOIExposedValues.AOICondition = "afternoon"
     else
         _G.AOIExposedValues.AOICondition = "night"
-    end 
+    end
 end
 
 local function periodicUpdate()
@@ -408,7 +408,11 @@ local function applyPatch()
 end
 
 local function startPatch()
-    
+
+    if not _G.AOIExposedValues then
+        _G.AOIExposedValues = generateExposedValues(false, nil, "unknown", "unknown")
+    end
+
     resetExposedValues()
 
     if not loadSettings() then
@@ -439,7 +443,7 @@ local function startPatch()
         return false
     end
 
-    applyPatch() 
+    applyPatch()
 end
 
 event.registerEventAsync("onInitDone", startPatch)
