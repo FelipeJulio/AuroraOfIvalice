@@ -113,7 +113,12 @@ https://github.com/user-attachments/assets/86962026-6c4b-48b4-bf19-7ea92a39c6c7
 
 ## Exposed Values
 
-You can utilize the exposed values in your own mod.
+You can use the exposed values in your own mod to create more immersive experiences.
+
+For example:
+- Enemies can become stronger at night.
+- Certain rare game may only appear during a specific cycle period.
+- Unique item drops could be tied to conditions like `"afternoon"` or `"night"`.
 
 The following values are available to monitor the cycle:
 
