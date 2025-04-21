@@ -77,9 +77,9 @@ The maps below include a generic preset that works well on most maps
 
 A heartfelt thanks to the following individuals for their help and encouragement:
 
-- **Xeavin**
-- **ffgriever**
-- **LowPriorityCitizen**
+- [**Xeavin**](https://next.nexusmods.com/profile/Xeavin?gameId=2304)
+- [**ffgriever**](https://next.nexusmods.com/profile/ffgriever?gameId=2304)
+- [**LowPriorityCitizen**](https://next.nexusmods.com/profile/LowPriorityCitizen?gameId=2304)
 
 ---
 
