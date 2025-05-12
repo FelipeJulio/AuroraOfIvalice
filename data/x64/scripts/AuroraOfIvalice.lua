@@ -7,6 +7,7 @@
 local AOISettings = {}
 local AOIPointers = {}
 local AOIMaps = {}
+local blockNextMapJump = false
 
 local function showLog(condition, message)
     if condition then
@@ -19,7 +20,9 @@ end
 -------------------------------------
 
 local function getConfigEnv()
-    return setmetatable({}, {__index = _G})
+    return setmetatable({}, {
+        __index = _G
+    })
 end
 
 local function loadExternalFile(path, description)
@@ -242,25 +245,33 @@ local function persistValues()
         return
     end
 
-    if not AOISettings.applyEffects then
-        AOISettings.currentCycleTime = AOISettings.currentCycleTime + AOISettings.updateIntervalMs
-        if AOISettings.currentCycleTime >= AOISettings.totalCycleTimeMs then
-            AOISettings.currentCycleTime = AOISettings.currentCycleTime % AOISettings.totalCycleTimeMs
-            AOISettings.cycleDirection = -AOISettings.cycleDirection
-        end
-        return
-    end
-
     persistPointers()
     persistStatics()
     updateCycleVariables()
 
-    AOISettings.currentCycleTime = AOISettings.currentCycleTime + AOISettings.updateIntervalMs
+    local progress = AOISettings.currentCycleTime / AOISettings.totalCycleTimeMs
+    local direction = AOISettings.cycleDirection
+
+    if direction == -1 then
+        progress = 1 - progress
+    end
+
+    local curve = 1.0
+    if progress <= 0.33 then
+        curve = AOISettings.dayCurve or 1.0
+    elseif progress <= 0.66 then
+        curve = AOISettings.afternoonCurve or 1.0
+    else
+        curve = AOISettings.nightCurve or 1.0
+    end
+
+    local delta = AOISettings.updateIntervalMs * curve
+    AOISettings.currentCycleTime = AOISettings.currentCycleTime + delta
+
     if AOISettings.currentCycleTime >= AOISettings.totalCycleTimeMs then
         AOISettings.currentCycleTime = AOISettings.currentCycleTime % AOISettings.totalCycleTimeMs
         AOISettings.cycleDirection = -AOISettings.cycleDirection
     end
-
 end
 
 -------------------------------------
@@ -333,8 +344,15 @@ end
 
 local function onMapJump(locationId, flags)
 
+    showLog(true, string.format("Map Jump %X.", locationId))
+
     local mapRegion = "unknown"
     local mapName = "unknown"
+
+    if blockNextMapJump then
+        showLog(true, string.format("Map Jump BLOCKED %X.", locationId))
+        return
+    end
 
     for region, maps in pairs(AOIMaps) do
         for _, map in ipairs(maps) do
@@ -384,6 +402,21 @@ local function onMapJump(locationId, flags)
     resetDefaultValues()
 end
 
+local function onOpenFile(reader, filename, flag)
+    if filename and type(filename) == "string" then
+        local normalized = filename:lower()
+        if normalized:find("str_z0000_") then
+            blockNextMapJump = true
+
+            event.executeAfterMs(10000, function()
+                blockNextMapJump = false
+            end)
+        end
+    end
+
+    return true
+end
+
 -------------------------------------
 -- START MOD
 -------------------------------------
@@ -401,6 +434,7 @@ local function applyPatch()
     end)
 
     event.registerEventAsync("onMapJump", onMapJump)
+    event.registerEventAsync("onOpenFile", onOpenFile)
     event.registerEventSync("onFlip", persistValues)
     event.registerEventAsync("exit", onExit)
 
@@ -447,31 +481,3 @@ local function startPatch()
 end
 
 event.registerEventAsync("onInitDone", startPatch)
-
--------------------------------------
--- TEST EVENT
--------------------------------------
-
--- local function onOpenFile(reader, filename, flag)
---     if filename and type(filename) == "string" then
---         if filename:find("\\us\\WorldMap\\menumap_location") then
-
---             showLog(true, string.format("Aurora of Ivalice (AOI): File open: %s", filename))
-
---             AOISettings.pausePersist = true
---             AOIPointers.initialValues = {
---                 pointers = {},
---                 staticAddresses = {}
---             }
-
---             event.executeAfterMs(500, function()
---                 updateInitialValues()
---                 AOISettings.pausePersist = false
---             end)
---         end
---     end
-
---     return true
--- end
-
--- event.registerEventAsync("onOpenFile", onOpenFile)

@@ -1,5 +1,4 @@
 -- Aurora of Ivalice: Made by FehDead
-
 -------------------------------------
 -- AOI SETTINGS
 -------------------------------------
@@ -12,20 +11,23 @@
 -- updateIntervalMs        Value update interval
 -- cycleDirection          Cycle direction
 -- applyedpreset           Default preset
+-- **Curve                 Velocity of condition
 -------------------------------------
-
 local AOISettings = {
-    modVer =  "v1.0.0",
+    modVer = "v1.0.0",
     minVer = {1, 5, 1},
     disableMod = false,
     disableCycle = false,
     pausePersist = false,
     applyEffects = false,
-    totalCycleTimeMs = 12000000, --12000000 - 300000 (test)
+    totalCycleTimeMs = 27000000, -- 27000000 - 300000 (test)
     currentCycleTime = 0,
     updateIntervalMs = 1000,
     cycleDirection = 1,
-    applyedpreset = "sunny"
+    applyedpreset = "sunny",
+    dayCurve = 1.0,
+    afternoonCurve = 2.0,
+    nightCurve = 3.0
 }
 
 return AOISettings
